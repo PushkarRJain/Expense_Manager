@@ -1,0 +1,22 @@
+body{
+  height: 100%;
+  overflow: hidden;
+  background-image: url("Images/eceb7990b39fa62d4189f57f2076712f.png");
+}
+h1{
+  padding-top: 10%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+#buttons{
+  padding-top: 20%;
+  padding-left :25%;
+  margin-right :auto;
+
+}
+#buttons1{
+  padding-top: 20%;
+  padding-left :15%;
+  margin-right :auto;
+
+}
