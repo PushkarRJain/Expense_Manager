@@ -3,7 +3,7 @@
 <head>
 <!-- basis instructions given by user. Not displayed on webpage -->
 <link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css">
-<link rel = "stylesheet" type = "text/css" href = "css/home.css">
+
 
 <title>Sttings</title>
 </head>
@@ -38,7 +38,37 @@
     </div><!-- /.container-fluid -->
   </nav>
   <div class="container content">
-  <h1>Settings</h1>
+  <h1>Update Budget</h1>
+  <form action='/budget' method="post" class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="number" name="budget" class="form-control" id="inputPassword2" placeholder="Budget">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+  <h1>Add Expenditure</h1>
+  <form action='/expenditure' method="post">
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Select Category</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="cat">
+      <option>Category 1</option>
+      <option>Category 2</option>
+      <option>Category 3</option>
+      <option>Category 4</option>
+      <option>Category 5</option>
+    </select>
+  </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Add Item</label>
+      <input type="text" name="item" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Item Name">
+  
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Money Spent</label>
+      <input type="number" name="cost" class="form-control" id="exampleInputPassword1" placeholder="Cost">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

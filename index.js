@@ -73,6 +73,20 @@ app.post("/login", function(req, res){
     }
   });
 });
+app.post("/budget",function(req,res){
+  var budget= Number(req.body.budget);
+  console.log(budget)
+  res.sendFile(__dirname+'/settings.html');
+})
+app.post("/expenditure",function(req,res){
+  var category = req.body.cat;
+  var item = req.body.item;
+  var cost = Number(req.body.cost);
+  console.log(category);
+  console.log(item);
+  console.log(cost);
+  res.sendFile(__dirname+'/settings.html');
+})
 app.listen(3000, function() {
   console.log("Server started on port 3000.");
 });
