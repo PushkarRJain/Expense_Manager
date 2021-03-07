@@ -33,7 +33,15 @@ app.get("/login", function(req, res){
 app.get("/register", function(req, res){
   res.sendFile(__dirname+'/register.html');
 });
-
+app.get("/home", function(req, res){
+  res.sendFile(__dirname+'/home.html');
+});
+app.get("/settings", function(req, res){
+  res.sendFile(__dirname+'/settings.html');
+});
+app.get("/dashboard", function(req, res){
+  res.sendFile(__dirname+'/dashboard.html');
+});
 app.post("/register", function(req, res){
   const newUser =  new User({
     email: req.body.username,
@@ -43,7 +51,7 @@ app.post("/register", function(req, res){
     if (err) {
       console.log(err);
     } else {
-      res.sendFile(__dirname+'/index.html');
+      res.sendFile(__dirname+'/home.html');
     }
   });
 
@@ -59,7 +67,7 @@ app.post("/login", function(req, res){
     } else {
       if (foundUser) {
         if (foundUser.password === password) {
-          res.sendFile(__dirname+'/index.html');
+          res.sendFile(__dirname+'/home.html');
         }
       }
     }
