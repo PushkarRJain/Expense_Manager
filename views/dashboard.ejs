@@ -72,6 +72,47 @@
       }
     }
     </script>
+  <div class="container"><button type="button" onclick="myFunction1()" class="btn btn-secondary btn-lg ejsbut">Update Expenses</button></div>
+  <div id="myDIV1" class="container">
+    
+    
+   <!--<form action="/updatecontents" action="POST">
+     <input type="text" name="inametobe" placeholder="Item name to be updated" class="border-bottom border-primary"autocomplete="off">
+     <input type="text" name="updatename" placeholder="Updated item name" class="border-bottom border-primary"autocomplete="off">
+     <input type="text" name="updatecost" placeholder="Updated cost" class="border-bottom border-primary"autocomplete="off">
+     <input type="submit" value="Update" class="btn btn-primary btn-block mb-3">
+   </form>-->
+   <form action='/updatecontents' method="post">
+     <div class="form-group">
+          
+           <input type="text" name="inametobe" class="form-control" id=""  placeholder="Item Name to be updated">
+       
+         </div>
+         <div class="form-group">
+           
+           <input type="text" name="updatename" class="form-control" id=""  placeholder="Updated Name">
+       
+         </div>
+         <div class="form-group">
+           
+           <input type="number" name="updatecost" class="form-control" id="" placeholder="Updated Cost">
+         </div>
+         
+         <button type="submit" class="btn btn-primary">Update</button>
+       </form>
+
+  </div>
+
+  <script>
+   function myFunction1() {
+     var x = document.getElementById("myDIV1");
+     if (x.style.display === "none") {
+       x.style.display = "block";
+     } else {
+       x.style.display = "none";
+     }
+   }
+   </script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>

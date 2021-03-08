@@ -1,22 +1,19 @@
 body{
-  height: 100%;
-  overflow: hidden;
-  background-image: url("../Images/eceb7990b39fa62d4189f57f2076712f.png");
+  background-color: aquamarine;
 }
 h1{
   padding-top: 10%;
-  padding-left: 30%;
-  padding-right: 30%;
+  text-align: center;
 }
 #buttons{
-  padding-top: 20%;
+  padding-top: 15%;
   padding-left :25%;
   margin-right :auto;
 
 }
 #buttons1{
-  padding-top: 20%;
-  padding-left :15%;
+  padding-top: 15%;
+  padding-left :25%;
   margin-right :auto;
 
 }

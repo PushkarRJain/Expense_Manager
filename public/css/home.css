@@ -7,3 +7,20 @@ h1,h2{
 body{
   background-color: aquamarine;
 }
+
+.ejsbut{
+  margin-top: 5%;
+  margin-left: 45%;
+}
+#myDIV{
+  display: none;
+}
+#myDIV1{
+  display: none;
+}
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+.striked{
+  text-decoration: line-through;
+}

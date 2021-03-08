@@ -4,7 +4,9 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 const encrypt = require("mongoose-encryption");
 const JSAlert = require('js-alert');
+
 const app = express();
+
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
@@ -214,6 +216,52 @@ app.post("/checkbox",function(req,res){
     }
   });
 })
+app.post("/updatecontents",function(req,res)
+{
+  console.log(req.body.inametobe);
+  console.log(req.body.updatename);
+  console.log(req.body.updatecost);
+  const toupdate=req.body.inametobe;
+  const newname=req.body.updatename;
+  const newcost=req.body.updatecost;
+  
+  Expense.findOne({email: username,item:toupdate},function(err, foundUser){
+    if(err)
+    {
+      console.log(err);
+    }
+    else
+    {
+      var bud=foundUser.cost;
+      budget_val = Number(budget_val)+Number(newcost)-Number(bud);
+      console.log('All good!')
+    }
+  });
+  User.updateOne({email:username},{budget:budget_val},function(err){
+    if(err){
+         console.log(err);
+       }
+    else{
+         console.log('All good!')
+       }
+     });
+  Expense.updateOne({email: username,item:toupdate},{item:newname,cost:newcost}, function(err, foundUser){
+    if(err)
+    {
+      console.log(err);
+    }
+    else
+    {
+      console.log('All good!')
+    }
+  });
+  res.redirect('/dashboard');
+
+      });
+      
+
+    
+
 app.listen(3000, function() {
   console.log("Server started on port 3000.");
 });
