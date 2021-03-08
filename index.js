@@ -57,7 +57,17 @@ app.get("/settings", function(req, res){
   else{res.redirect('/')}
 });
 app.get("/dashboard", function(req, res){
-  if(flag==1){res.sendFile(__dirname+'/dashboard.html');}
+  if(flag==1)
+  {   
+    Expense.find({ email: username }, function(err, results) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(results);
+          res.render('dashboard',{budget:budget_val,results:results});
+        }
+      });
+  }
   else{res.redirect('/')}
 });
 app.get("/signout", function(req, res){
@@ -81,6 +91,7 @@ app.post("/register", function(req, res){
       console.log(err);
     } else {
       flag=1;
+      budget_val=0;
       res.sendFile(__dirname+'/home.html');
     }
   });
@@ -97,6 +108,7 @@ app.post("/login", function(req, res){
     } else {
       if (foundUser) {
         if (foundUser.password === password) {
+          budget_val = foundUser.budget
           flag=1;
           res.sendFile(__dirname+'/home.html');
         }
@@ -149,6 +161,58 @@ app.post("/expenditure",function(req,res){
     }
   });
   
+})
+app.post("/checkbox",function(req,res){
+  var id = req.body.checkbox;
+  Expense.findOne({_id: id}, function(err, foundUser){
+    if (err) {
+      console.log(err);
+    } else {
+      if (foundUser) {
+        if (foundUser.delete === false) {
+          budget_val = Number(budget_val)+Number(foundUser.cost);
+          Expense.updateOne({_id:id},{delete:1},function(err){
+            if(err){
+                 console.log(err);
+               }
+            else{
+                 console.log('All good!')
+               }
+             });
+             User.updateOne({email:username},{budget:budget_val},function(err){
+              if(err){
+                   console.log(err);
+                 }
+              else{
+                   console.log('All good!')
+                 }
+               });
+               res.redirect('/dashboard');
+        }
+        else{
+          budget_val = Number(budget_val)-Number(foundUser.cost);
+          Expense.updateOne({_id:id},{delete:false},function(err){
+            if(err){
+                 console.log(err);
+               }
+            else{
+                 console.log('All good!')
+               }
+             });
+          
+          User.updateOne({email:username},{budget:budget_val},function(err){
+            if(err){
+                 console.log(err);
+               }
+            else{
+                 console.log('All good!')
+               }
+             });
+             res.redirect('/dashboard');
+        }
+      }
+    }
+  });
 })
 app.listen(3000, function() {
   console.log("Server started on port 3000.");

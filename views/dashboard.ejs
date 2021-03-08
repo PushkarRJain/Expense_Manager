@@ -37,10 +37,41 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  <div class="container content">
-  <h1>Dashboard</h1>
+  <div class="container">
+  <h1>Budget is ₹<%= budget %> </h1>
+  <button type="button" href="/settings" class="btn btn-secondary btn-lg ejsbut"><a href="/settings">Add Expenditure</a></button>
+  <button type="button" onclick="myFunction()" class="btn btn-secondary btn-lg ejsbut">Display Expenses</button>
 
+  <div id="myDIV">
+ <% results.forEach(function(item){ %>
+  <form action='/checkbox' method="post">
+  <div class="form-group ">
+    <div class="col-lg-12">
+      
+          <input id="strike" type="checkbox" value="<%=item._id %>" name='checkbox' onchange="this.form.submit()">
+          <%if(item.delete===true){%> 
+            <label for="packers" class="striked"><p><%= item.category%> <%= item.item%> ₹<%= item.cost%></p></label>
+           <%}else{%>   
+            <label for="packers" class="strikethrough"><p><%= item.category%> <%= item.item%> ₹<%= item.cost%></p></label>
+            <%}%> 
+
+     </div>
+</div>
+</form>
+    
+    <%})%> 
   </div>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
