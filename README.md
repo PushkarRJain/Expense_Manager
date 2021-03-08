@@ -1,4 +1,4 @@
-This is a budhet manager project.
+This is a budget manager project.
 
 The technologies used in this project are: Html, Css, Javascript, Mongo Db.
 The dependencies are: Node js, Express js, mongoose.
@@ -12,7 +12,7 @@ a) Dashboard
 b)Settings
 c)Log Out
 
-On the settings page, user can add budget, select its category(using radio buttons), enter the item and cost.
+On the settings page, user can add budget, select its category, enter the item and cost.
 
 On the Dashboard page, first, the budget of the user is displayed.Then, there are three buttons.
 Add expense, view expense and Update expense.
