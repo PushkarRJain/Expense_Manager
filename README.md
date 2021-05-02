@@ -50,11 +50,11 @@ Dashboard 1
 
 Dashboard 2
 
-![image](https://user-images.githubusercontent.com/56025143/116801726-040eff80-ab2a-11eb-8638-7de006c57714.png)
+![image](https://user-images.githubusercontent.com/56025143/116802125-1d19af80-ab2e-11eb-8d70-8a864b7f1280.png)
 
 Dashboard 3
 
-![image](https://user-images.githubusercontent.com/56025143/116801741-1721cf80-ab2a-11eb-873e-6c4e4a435c8e.png)
+![image](https://user-images.githubusercontent.com/56025143/116802117-0410fe80-ab2e-11eb-975a-80e723efc8ab.png)
 
 Settings Page
 
