@@ -42,15 +42,19 @@ Register page
 
 Home Page
 
-![image](https://user-images.githubusercontent.com/56025143/110336026-798ab200-804a-11eb-8e91-275cb88ea76c.png)
+![image](https://user-images.githubusercontent.com/56025143/116801696-c316eb00-ab29-11eb-9685-3cc4eed60049.png)
+
 Dashboard 1
 
-![image](https://user-images.githubusercontent.com/56025143/110336150-9626ea00-804a-11eb-8f39-b5545876c4b0.png)
+![image](https://user-images.githubusercontent.com/56025143/116801717-f48fb680-ab29-11eb-9daa-68f72ec3845c.png)
+
 Dashboard 2
 
-![image](https://user-images.githubusercontent.com/56025143/110336238-adfe6e00-804a-11eb-8021-7a98c8c479fa.png)
+![image](https://user-images.githubusercontent.com/56025143/116801726-040eff80-ab2a-11eb-8638-7de006c57714.png)
+
 Dashboard 3
 
-![image](https://user-images.githubusercontent.com/56025143/110336310-be164d80-804a-11eb-8beb-ce78ea586278.png)
+![image](https://user-images.githubusercontent.com/56025143/116801741-1721cf80-ab2a-11eb-873e-6c4e4a435c8e.png)
+
 Settings Page
 
