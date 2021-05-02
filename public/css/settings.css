@@ -1,0 +1,30 @@
+body{
+  background-image: url(../Images/pexels-karolina-grabowska-4386373.jpg);
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container
+{
+  backdrop-filter: blur(5px);
+}
+.ejsbut{
+  margin-top: 5%;
+  margin-left: 45%;
+}
+#myDIV{
+  display: none;
+}
+#myDIV1{
+  display: none;
+}
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+.striked{
+  text-decoration: line-through;
+}

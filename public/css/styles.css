@@ -1,9 +1,18 @@
 body{
-  background-color: aquamarine;
+  background-image: url(../Images/pexels-burst-373912.jpg);
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 h1{
   padding-top: 10%;
   text-align: center;
+  color:beige;
+  font-weight: bold;
 }
 #buttons{
   padding-top: 15%;
@@ -16,4 +25,18 @@ h1{
   padding-left :25%;
   margin-right :auto;
 
+}
+@media screen and (max-width: 500px) {
+  #buttons{
+    padding-top: 15%;
+    padding-left :40%;
+    margin-right :auto;
+  
+  }
+  #buttons1{
+    padding-top: 15%;
+    padding-left :40%;
+    margin-right :auto;
+  
+  }
 }

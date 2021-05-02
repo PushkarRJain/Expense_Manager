@@ -1,0 +1,48 @@
+body{
+  background-image: url(../Images/pexels-lukas-669622.jpg);
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container
+{
+  backdrop-filter: blur(5px);
+}
+
+h1{
+  color:#337ab7;
+  font-weight: 1000;
+  margin-left: 35%;
+}
+p{
+  color:#337ab7;
+  font-weight: 1000;
+
+}
+.padd{
+  margin-left: 30%;
+}
+.white
+{
+  color: white;
+}
+.ejsbut{
+  margin-top: 5%;
+  margin-left: 40%;
+}
+#myDIV{
+  display: none;
+}
+#myDIV1{
+  display: none;
+}
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+.striked{
+  text-decoration: line-through;
+}

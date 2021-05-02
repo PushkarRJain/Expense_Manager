@@ -1,35 +1,53 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-    <title>Register</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <link href="css/form.css" rel="stylesheet">
-  </head>
-
-  <body class="text-center">
-    <form action='/register' method="post" class="form-signin">
-      <img class="mb-4" src="Images/profile.png" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please Sign up</h1>
-      
-      <input type="email" name="username" id="inputEmail" class="form-control top" placeholder="Email address" required autofocus>
-      
-      <input type="password" name="conpass"id="conPassword" class="form-control middle" placeholder="Confirm Password" required>
-      
-      <input type="password"name="password" id="inputPassword" class="form-control bottom" placeholder="Password" required>
-      <input type="submit" name="signup" id="register" class="btn btn-lg btn-primary btn-block" value="Signup"/>
-      
-  
-    </form>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <main>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 login-section-wrapper">
+          <div class="brand-wrapper">
+            <h1> Hello </h1>   
+          </div>
+          <div class="login-wrapper my-auto">
+            <h1 class="login-title">Register in</h1>
+            <form action="/register" method="POST">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="username" id="email" class="form-control" placeholder="email@example.com">
+              </div>
+              <div class="form-group mb-4">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="enter your passsword">
+              </div>
+              <div class="form-group mb-4">
+                <label for="conpassword">Confirm Password</label>
+                <input type="password" name="conpassword" id="password" class="form-control" placeholder="confirm passsword">
+              </div>
+              <button class="btn btn-block login-btn" type="submit">Register</button>
+            </form>
+            
+            <p class="login-wrapper-footer-text">Already have an account? <a href="/login" class="text-reset">Login here</a></p>
+          </div>
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src="Images/register.jpg" alt="login image" class="login-img">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
 </html>
